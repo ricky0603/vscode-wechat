@@ -11,7 +11,8 @@ import createCodeSnippets from "./codeSnippet";
 import * as wechatApp from "./wechatApp";
 
 function checkWechatAppProj() {
-    const appConfigFile = path.join(vscode.workspace.rootPath, "app.json");
+    const appConfigFile1 = path.join(vscode.workspace.rootPath, "src");
+    const appConfigFile = path.join(appConfigFile1,"app.json")
     try {
         const data = fs.readFileSync(appConfigFile, 'utf-8');
         const config = JSON.parse(data);
